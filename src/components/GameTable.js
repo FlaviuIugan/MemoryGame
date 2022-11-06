@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./GameTable.css";
 import { useState, useEffect } from "react";
 import Card from "./Card.js";
@@ -18,7 +19,7 @@ const GameTable = ({
     setGameImages((prevState) => {
       return prevState.map((image) => {
         if (image.key === key) {
-          return { ...image, isMatched: true };
+          return { ...image, isMatched: true, click: true };
         } else {
           return { ...image };
         }
@@ -44,7 +45,7 @@ const GameTable = ({
           setGameImages((prevState) => {
             return prevState.map((image) => {
               if (image.key === choiceOne.key || image.key === choiceTwo.key) {
-                return { ...image, isMatched: false };
+                return { ...image, isMatched: false, click: false };
               } else {
                 return { ...image };
               }

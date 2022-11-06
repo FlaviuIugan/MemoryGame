@@ -1,19 +1,18 @@
 import "./Card.css";
-import { useState, useEffect } from "react";
 
 export default function Card({ image, gameCardBackground, handleChoice }) {
-  // const [isActive, setIsActive] = useState(true);
-  const handleClick = () => {
+  const handleClick = (e) => {
+    console.log("clicked");
     handleChoice(image.card, image.key);
   };
 
   return (
-    <div className="card" onClick={handleClick}>
+    <div className="card" onClick={!image.click ? handleClick : null}>
       <div>
         <img
           className="front"
           src={!image.isMatched ? gameCardBackground : image.card}
-          onClick={handleClick}
+          alt=""
         />
       </div>
     </div>

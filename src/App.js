@@ -5,8 +5,6 @@ import Footer from "./components/Footer";
 import GameTable from "./components/GameTable";
 import Modal from "./components/Modal";
 
-import { matchPath } from "react-router-dom";
-
 function App() {
   const [isModal, setIsModal] = useState(true);
   const [turns, setTurns] = useState(0);
@@ -26,6 +24,7 @@ function App() {
           card,
           isMatched: false,
           key: i,
+          click: false,
         };
       });
 
