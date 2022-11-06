@@ -2,12 +2,13 @@
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-rows: auto;
-  align-items: center;
-    /* width: 640px; */
-    /* 
-    margin: 20px auto;*/
+    align-items: center;
+    max-width: 500px;
+    margin-left: 30%;    
+    margin-right: 30%;
+
     position: relative; 
   }
 
